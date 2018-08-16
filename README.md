@@ -63,8 +63,11 @@ mysql> show databases;
   wget http://download.redis.io/releases/latest-release.tar.gz
 8. Move to /opt directory using sudo tar -C /opt -xzf redis-latest-relase.tar.gz
 9. Go to the /opt/redis-latest-relase directry and check the redis server installation
+
   make
+  -----
   make test
+  ----------
 10. If everyting is working fine then redis server is ready to use it.
 11. Start the Redis Server  /opt/redis-3.2.0/src/redis-server &
  if everything is fine then you will see as follows
