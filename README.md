@@ -37,9 +37,11 @@ Please make sure with the following
 * Board News show with list
 * Go Language and Beego Orm Framework
 
+Choosen the Frameworks
+=======================
 * Choosen the Language & Framework as GO Lang & Beego(Mvc) Orm Framework
 * Session Management with Redis (Handling the Session through Redis Server)
-* Used Capcha Security
+* Security Used Capcha Security
 
 1. Setup and configure required packages for the ubuntu os or ubuntu Virtual Machine
 2. sudo apt-get update
@@ -70,7 +72,7 @@ mysql> show databases;
  11949:M 16 Aug 2018 08:49:26.575 # Current maximum open files is 4096. maxclients has been reduced to 4064 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
                  _._
             _.-``__ ''-._
-       _.-``    `.  `_.  ''-._           Redis 4.9.104 (00000000/0) 64 bit
+       _.-``    `d.  `_.  ''-._           Redis 4.9.104 (00000000/0) 64 bit
    .-`` .-```.  ```\/    _.,_ ''-._
   (    '      ,       .-`  | `,    )     Running in standalone mode
   |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
@@ -119,7 +121,7 @@ mysql> show databases;
   * **controllers --> All ther controllers for the requirments . ex. login and logout **
   * **views -->  All the front end templates configurations **
   * ** static --> Default static image, jquery file configruations **
-  * ** main.go --> Start or Initate the Project**
+  * ** main.go --> Start or Initiate the Project**
 
 
   * **ProjectName ---Demoapi**
@@ -209,6 +211,10 @@ mysql> show databases;
 
   22. When we run main.go it will create the tables automatically. No need to create externally
 
+   * **Build the project go build main.go**
+   * **Run the Project go run main.go**
+
+
   mysql> show tables;
   +--------------------+
   | Tables_in_api_demo |
@@ -247,6 +253,7 @@ mysql> desc profile;
 7 rows in set (0.00 sec)
 
 
+
 Check it the images from /assest/
 
 Description :
@@ -268,10 +275,10 @@ ScreenShots Links
 ![](https://github.com/dharmajaya/DemoAPI-Go/blob/master/assets/database2018-08-16.png)
 ![](https://github.com/dharmajaya/DemoAPI-Go/blob/master/assets/database12018-08-16.png)
 ![](https://github.com/dharmajaya/DemoAPI-Go/blob/master/assets/database22018-08-16.png)
-![](https://github.com/dharmajaya/DemoAPI-Go/blob/master/assets/code1 2018-08-16.png)
+![](https://github.com/dharmajaya/DemoAPI-Go/blob/master/assets/code12018-08-16.png)
 ![](https://github.com/dharmajaya/DemoAPI-Go/blob/master/assets/code2018-08-16.png)
 ![](https://github.com/dharmajaya/DemoAPI-Go/blob/master/assets/Runpage2018-08-16.png)
-![](https://github.com/dharmajaya/DemoAPI-Go/blob/master/assets/DemoAPI GO.png)
+![](https://github.com/dharmajaya/DemoAPI-Go/blob/master/assets/DemoAPIGO.png)
 ![](https://github.com/dharmajaya/DemoAPI-Go/blob/master/assets/homepage12018-08-16.png)
 ![](https://github.com/dharmajaya/DemoAPI-Go/blob/master/assets/homepage2018-08-16.png)
 ![](https://github.com/dharmajaya/DemoAPI-Go/blob/master/assets/singuppage2018-08-16.png)
