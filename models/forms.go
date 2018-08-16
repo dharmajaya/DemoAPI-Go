@@ -2,13 +2,13 @@ package models
 
 import (
   "regexp"
-  "src/github.com/astaxie/beego/validation"
+  "github.com/astaxie/beego/validation"
 )
 
 
 type FormUserSignUp struct {
-  Username           string `valid:"Required;MinSize(2);Alpha"`
-  Nickname           string `valid:"Required;MinSize(2);Alpha"`
+  Username           string `valid:"Required;Alpha"`
+  Nickname           string `valid:"Required;Alpha"`
   Phone              string `valid:"Required;MinSize(12);MaxSize(12)"`
   Email           string `valid:"Email"`
   Password        string `valid:"MinSize(8);MaxSize(36)"`
@@ -71,7 +71,7 @@ func (form *FormUserPasswordUpdate) Valid(v *validation.Validation) {
     v.SetError("NewPassword", "Password must contain at least one number")
   }
 
-}//end FormPasswordUpdate.valid func
+}
 
 
 func (form *FormUserSignUp) Valid(v *validation.Validation) {
@@ -112,7 +112,7 @@ func (form *FormUserUpdate) Valid(v *validation.Validation) {
   valid := validation.Validation{}
 
   if form.Phone != "" {
-    matched, err := regexp.MatchString("^\\d{3}\\-\\d{3}\\-\\d{4}$", form.Phone1)
+    matched, err := regexp.MatchString("^\\d{3}\\-\\d{3}\\-\\d{4}$", form.Phone)
 
     if err != nil {
       v.SetError("Phone1", "Something wierd is going on here.")

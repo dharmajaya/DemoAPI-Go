@@ -22,12 +22,12 @@
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
           <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-        </button><a class="navbar-brand" href="/"><img src="//{{.base_url}}/static/img/logo.png" alt="My Logo"></a>
+        </button><a class="navbar-brand" href="/"><img src="//{{.base_url}}/static/img/go_logo.png" alt="My Logo"></a>
       </div><!-- end navbar head -->
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav pull-right">
           {{if .Session}}
-          <li><p class="navbar-text">Welcome, {{.Session.first}}</p></li>
+          <li><p class="navbar-text">Welcome to all, {{.Session.Username}}</p></li>
           <li><a href="//{{.base_url}}/user/logout"><span class="glyphicon glyphicon-off"></span></a></li>
           <li><a href="//{{.base_url}}/user/profile"><span class="glyphicon glyphicon-user"></span></a></li>
           {{else}}
@@ -67,7 +67,7 @@
       <div class="row" id="bigCallout">
          <div class="col-12">
           <div class="jumbotron">
-            <h3><em>Beego User Registration Example</em></h3>
+            <h3><em>Demo API User Registration</em></h3>
           </div><!-- end jumbotron -->
         </div><!-- end col-12 -->
       </div><!-- end bigCallout -->
@@ -78,7 +78,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12">
-          <h6>&copy; 2015 Some Inc.</h6>
+          <h6>&copy; 2018 Some Inc.</h6>
         </div><!-- end col-sm-2 -->
       </div><!-- end row -->
     </div><!-- end container -->

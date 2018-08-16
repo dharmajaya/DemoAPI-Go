@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"src/github.com/astaxie/beego"
+	"github.com/astaxie/beego"
 )
 
 type ErrorController struct {

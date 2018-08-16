@@ -2,8 +2,7 @@ package models
 
 import (
 	"time"
-	"src/github.com/astaxie/beego/orm"
-	/*"src/github.com/golang/protobuf/conformance/internal/conformance_proto"*/
+	"github.com/astaxie/beego/orm"
 )
 
 
@@ -15,6 +14,7 @@ type User struct {
 	Phone                          string
 	Location                       string
 	Password                       string
+	ConfirmPassword                string
 	Registration_uid               string
 	Registration_date              time.Time `orm:"auto_now_add;type(datetime)"`
 	Password_reset_uid             string
@@ -38,7 +38,7 @@ type Profile struct {
 }
 
 type Market struct {
-	Uid                        string
+	Uid                        string `orm:"pk"`
 	AssetName		   string
 	NewPrice                   float32
 	BoardNews                  string
@@ -52,13 +52,14 @@ func (account User) CopySignUpForm(form *FormUserSignUp) User {
   account.Nickname = form.Nickname
   account.Email = form.Email
   account.Password = form.Password
+	account.ConfirmPassword = form.ConfirmPassword
   account.Phone = form.Phone
 
   return account
 }
 
 
-func (newsDetails Market) saveNewsForm(form *FormNews) Market{
+func (newsDetails Market) CopyNewsForm(form *FormNews) Market {
   newsDetails.News = form.News
 	newsDetails.BoardNews = form.BoardNews
 	newsDetails.PromoteNews = form.PromoteNews

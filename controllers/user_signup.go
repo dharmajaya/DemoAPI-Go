@@ -1,11 +1,10 @@
 package controllers
 
 import (
-  "src/github.com/astaxie/beego"
-  "src/github.com/astaxie/beego/orm"
-  "src/github.com/astaxie/beego/validation"
-  _ "src/github.com/astaxie/beego/cache/redis"
-  //"src/github.com/uuid"
+  "github.com/astaxie/beego"
+  "github.com/astaxie/beego/orm"
+  "github.com/astaxie/beego/validation"
+  _ "github.com/astaxie/beego/cache/redis"
   "github.com/twinj/uuid"
   "../models"
 )
@@ -19,7 +18,8 @@ type SignupController struct {
 func (this *SignupController) Get() {
 
   beego.Debug("In SignupController:Get - Start")
-  this.LayoutSections["Footer"] = "signupcontroller/footer.tpl"
+
+  this.LayoutSections["Footer"] = "signupcontroller/get.tpl"
 }
 
 
@@ -74,7 +74,7 @@ func (this *SignupController) Post() {
   o.Using("write")
 
   user := models.User{}
- 
+
   user = user.CopySignUpForm(&signupform)
 
   user.Uid = uuid.NewV5(app_name_space, uuid.Name(user.Email)).String()

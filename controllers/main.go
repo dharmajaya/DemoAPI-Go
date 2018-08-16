@@ -1,10 +1,10 @@
 package controllers
 
 import (
-  "src/github.com/astaxie/beego"
-  "src/github.com/astaxie/beego/cache"
-  _ "src/github.com/astaxie/beego/cache/redis"
-  "src/github.com/astaxie/beego/utils/captcha"
+  "github.com/astaxie/beego"
+  "github.com/astaxie/beego/cache"
+  _ "github.com/astaxie/beego/cache/redis"
+  "github.com/astaxie/beego/utils/captcha"
   "github.com/twinj/uuid"
 )
 
@@ -26,10 +26,7 @@ var(
 func init() {
   store, _ := cache.NewCache(CacheProvider, CacheConnection)
   cpt = captcha.NewWithFilter("/user/captca/", store)
-
-
 }
-
 
 type BaseController struct {
   beego.Controller
@@ -50,8 +47,9 @@ func (this *BaseController) Prepare() {
 
   beego.ReadFromRequest(&this.Controller)
 
-  this.Data["Title"] = "Beego-Ureg"
+  this.Data["Title"] = "DemoAPI-GO"
   this.Data["base_url"] = base_url
+  beego.Debug("Base url "+base_url)
 
   this.Layout = "shared/layout.tpl"
 
@@ -76,9 +74,13 @@ func (this *UserController) Prepare() {
     beego.Debug("In AccountController:Prepare - Session not found kick the user back to /user/signin")
     this.Redirect("/user/signin", 303)
     return
+  } else {
+    beego.Debug("In AccountController:Prepare - Session not found redirect to  /user/signup")
+    this.Redirect("/user/signup", 303)
+
   }
 
-  beego.Debug("In AccountController:Prepare - found session setting logged flag to true")
+  beego.Debug("In AccountController: Prepare - found session setting logged flag to true")
   this.Data["logged"] = true
   this.Data["Session"] = session.(map[string]interface{})
   this.logged = true
@@ -86,7 +88,7 @@ func (this *UserController) Prepare() {
 
   beego.ReadFromRequest(&this.Controller)
 
-  this.Data["Title"] = "API-Demo"
+  this.Data["Title"] = "API-Demo-GO"
   this.Data["base_url"] = base_url
 
   this.Layout = "shared/layout.tpl"

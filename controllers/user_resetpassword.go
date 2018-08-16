@@ -1,10 +1,10 @@
 package controllers
 
 import (
-  "src/github.com/astaxie/beego"
-  "src/github.com/astaxie/beego/orm"
-  "src/github.com/astaxie/beego/validation"
-  _ "src/github.com/astaxie/beego/cache/redis"
+  "github.com/astaxie/beego"
+  "github.com/astaxie/beego/orm"
+  "github.com/astaxie/beego/validation"
+  _ "github.com/astaxie/beego/cache/redis"
   "../models"
   "github.com/twinj/uuid"
   "github.com/utils"
@@ -12,20 +12,19 @@ import (
 
 
 type ResetPasswordController struct {
-  BaseController
+  beego.Controller
 }
 
 func (this *ResetPasswordController) Get() {
   beego.Debug("In ResetPasswordController:Get - Start")
 }
 
-
 func (this *ResetPasswordController) Post() {
 
   beego.Debug("In ResetPasswordController:Post - Start")
 
   flash := beego.NewFlash()
-
+  signupform := models.FormUserSignUp{}
   submitted_reset_uid := this.Ctx.Input.Param(":uuid")
 
   o := orm.NewOrm()
@@ -37,8 +36,6 @@ func (this *ResetPasswordController) Post() {
 
   user.Uid = uuid.NewV5(app_name_space, uuid.Name(user.Email)).String()
 
-  user.Password = string(bcryptPasswordHash)
-
   // Add user to database with new uuid and send verification email
   registration_uid := uuid.NewV4().String()
 
@@ -46,7 +43,7 @@ func (this *ResetPasswordController) Post() {
 
   _, err = o.Insert(&user)
   if err != nil {
-    beego.Error("SignupController:Post - Got err inserting user to the database: ", err)
+    beego.Error(" Reset Password Controller:Post - Got err inserting user to the database: ", err)
     flash.Error(signupform.Email + " already registered")
     flash.Store(&this.Controller)
     return
@@ -57,7 +54,7 @@ func (this *ResetPasswordController) Post() {
 
   mail := utils.NewEMail(email_config)
   mail.To = []string{signupform.Email}
-  mail.From = gmail_account
+  mail.From = mail_account
   mail.Subject = "Beego-Ureg - Account Activation"
   mail.HTML = "To verify your account, please click on the following link.<br><br><a href=\""+link+
           "\">"+link+"</a><br><br>Best Regards,<br>Awesome's team"

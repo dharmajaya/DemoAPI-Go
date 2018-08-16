@@ -4,13 +4,13 @@
 <form method="POST">
   <div class="form-group{{if .Errors.UserName}} has-error has-feedback{{end}}">
     <label for="UserName">UserName <small class="text-danger">(required)</small></label>
-    <input type="text" class="form-control" id="UserName" name="UserName" {{if .Form.UserName}}value="{{.Form.UserName}}"{{end}}>
-    {{if .Errors.UserName}}<span class="help-block">{{.Errors.UserName}}</span>{{end}}
+    <input type="text" class="form-control" id="Username" name="Username" {{if .Form.Username}}value="{{.Form.Username}}"{{end}}>
+    {{if .Errors.Username}}<span class="help-block">{{.Errors.Username}}</span>{{end}}
   </div>
 
   <div class="form-group{{if .Errors.NickName}} has-error has-feedback{{end}}">
     <label for="NickName">NickName <small class="text-danger">(required)</small></label>
-    <input type="text" class="form-control" id="NickName" name="NickName" {{if .Form.NickName}}value="{{.Form.NickName}}"{{end}}>
+    <input type="text" class="form-control" id="Nickname" name="Nickname" {{if .Form.Nickname}}value="{{.Form.Nickname}}"{{end}}>
     {{if .Errors.NickName}}<span class="help-block">{{.Errors.NickName}}</span>{{end}}
   </div>
 

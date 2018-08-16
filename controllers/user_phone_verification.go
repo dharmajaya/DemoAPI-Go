@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"net/url"
 	"encoding/json"
-	"src/github.com/astaxie/beego"
+	"github.com/astaxie/beego"
 )
 
 type PhoneVerifyController struct {

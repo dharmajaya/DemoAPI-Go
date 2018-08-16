@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	_ "../routers"
 
-	"src/github.com/astaxie/beego"
+	"github.com/astaxie/beego"
 
 )
 

@@ -2,10 +2,10 @@ package controllers
 
 import (
   "golang.org/x/crypto/bcrypt"
-  "src/github.com/astaxie/beego"
-  "src/github.com/astaxie/beego/orm"
-  "src/github.com/astaxie/beego/validation"
-  _ "src/github.com/astaxie/beego/cache/redis"
+  "github.com/astaxie/beego"
+  "github.com/astaxie/beego/orm"
+  "github.com/astaxie/beego/validation"
+  _ "github.com/astaxie/beego/cache/redis"
   "../models"
 )
 
@@ -50,7 +50,7 @@ func (this *SecurityController) Post() {
 
   flash := beego.NewFlash()
 
-  passwordUpdateForm := models.FormPasswordUpdate{}
+  passwordUpdateForm := models.FormUserPasswordUpdate{}
 
   if err := this.ParseForm(&passwordUpdateForm); err != nil {
     beego.Debug("In SecurityController:Post - Got err parsing the form", err)

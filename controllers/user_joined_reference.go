@@ -1,10 +1,10 @@
 package controllers
 
 import (
-	"src/github.com/astaxie/beego"
-	"src/github.com/astaxie/beego/orm"
-	"src/github.com/astaxie/beego/validation"
-	_ "src/github.com/astaxie/beego/cache/redis"
+	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/orm"
+	"github.com/astaxie/beego/validation"
+	_ "github.com/astaxie/beego/cache/redis"
 	"../models"
 )
 

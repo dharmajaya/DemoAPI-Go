@@ -1,7 +1,7 @@
 package controllers
 
 import (
-  "src/github.com/astaxie/beego"
+  "github.com/astaxie/beego"
 )
 
 // Base Controller Actions
@@ -13,4 +13,5 @@ type IndexController struct {
 
 func (this *IndexController) Get() {
   beego.Debug("In IndexController.Get() - Started")
+  this.LayoutSections["Footer"] = "indexcontroller/get.tpl"
 }

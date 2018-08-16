@@ -5,6 +5,7 @@ body {
   /* Move down content because we have a fixed navbar that is 50px tall */
   margin-top: 75px;
   margin-bottom: 75px;
+  background-color : skyblue !important;
 }
 
 /* Sticky footer styles

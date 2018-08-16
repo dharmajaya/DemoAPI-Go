@@ -1,8 +1,8 @@
 package controllers
 
 import (
-  "src/github.com/astaxie/beego"
-  _"src/github.com/astaxie/beego/cache/redis"
+  "github.com/astaxie/beego"
+  _"github.com/astaxie/beego/cache/redis"
 )
 
 

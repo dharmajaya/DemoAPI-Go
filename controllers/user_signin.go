@@ -2,10 +2,10 @@ package controllers
 
 import (
   "golang.org/x/crypto/bcrypt"
-  "src/github.com/astaxie/beego"
-  "src/github.com/astaxie/beego/orm"
-  "src/github.com/astaxie/beego/validation"
-  _ "src/github.com/astaxie/beego/cache/redis"
+  "github.com/astaxie/beego"
+  "github.com/astaxie/beego/orm"
+  "github.com/astaxie/beego/validation"
+  _ "github.com/astaxie/beego/cache/redis"
   "../models"
 )
 
@@ -54,7 +54,7 @@ func (this *SigninController) Post() {
   
   if err == orm.ErrNoRows || err == orm.ErrMissPK {
 
-    flash.Error("The email or password you entered is incorrect.")
+    flash.Error("The email or password you entered is incorrect .Please Try again. (Please try to signup)")
     flash.Store(&this.Controller)
     return
 
