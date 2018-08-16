@@ -280,6 +280,11 @@ ScreenShots Links
 ![](https://github.com/dharmajaya/DemoAPI-Go/blob/master/assets/database22018-08-16.png)
 ![](https://github.com/dharmajaya/DemoAPI-Go/blob/master/assets/code12018-08-16.png)
 ![](https://github.com/dharmajaya/DemoAPI-Go/blob/master/assets/code2018-08-16.png)
+
+![](https://github.com/dharmajaya/DemoAPI-Go/blob/master/assets/Redis2018-08-16.png)
+![](https://github.com/dharmajaya/DemoAPI-Go/blob/master/assets/structure2018-08-16.png)
+![](https://github.com/dharmajaya/DemoAPI-Go/blob/master/assets/Structure12018-08-16.png)
+
 ![](https://github.com/dharmajaya/DemoAPI-Go/blob/master/assets/Runpage2018-08-16.png)
 ![](https://github.com/dharmajaya/DemoAPI-Go/blob/master/assets/DemoAPIGO.png)
 ![](https://github.com/dharmajaya/DemoAPI-Go/blob/master/assets/homepage12018-08-16.png)
