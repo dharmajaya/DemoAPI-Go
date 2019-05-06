@@ -37,7 +37,7 @@ Please make sure with the following
 * Board News show with list
 * Go Language and Beego Orm Framework
 
-Choosen the Frameworks
+Frameworks
 =======================
 * Choosen the Language & Framework as GO Lang & Beego(Mvc) Orm Framework
 * Session Management with Redis (Handling the Session through Redis Server)
